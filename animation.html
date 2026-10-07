@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션 효과</title>
+    <style>
+        .loading{
+            width: 50px;
+            height: 50px;
+            border: 5px solid #ddd;
+            border-radius: 50%;
+            border-top: 5px solid #333;
+            /* animation-name: loading;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;*/
+
+            animation: loading 2s linear infinite;
+        }
+        @keyframes loading{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+
+        .notice_btn{
+            all:unset;
+            border: 1px solid #ddd;
+            background-color: aqua;
+            padding: 5px 10px;
+            border-radius: 50px;
+            transition: all 0.3s;
+            animation: btn 2s alternate infinite;
+            
+        }
+        .notice_btn:hover{
+            background-color: rgb(1, 207, 207);
+            cursor: pointer;
+            
+        }
+        @keyframes btn{
+            from{
+                transform: scale(1);
+            }
+            to{
+                transform: scale(1.1);
+            }
+        }
+        .banner{
+            width: 600px;
+            padding: 80px 40px;
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+        }
+        .banner h1{
+            animation: titleshow 1s ease-out ;
+        }
+        .banner p{
+            animation: textshow 1s ease-out;
+            animation-delay: 0.5s;
+            /* animation의 from영역이 유지되게하는것 */
+            animation-fill-mode: backwards;
+        }
+
+        @keyframes titleshow{
+            from{
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to{
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+        @keyframes textshow{
+            from{
+                opacity: 0;
+                transform: translateY(20px);
+            }   
+            to{
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+
+        .alarm{
+            display: inline-block;
+            font-size: 50px;
+            animation: shake 0.5s infinite;
+        }
+        @keyframes shake{
+            0%{
+                transform: rotate(0deg);
+            }
+            25%{
+                transform: rotate(-15deg);
+            }
+            50%{
+                transform: rotate(0deg);
+            }
+            75%{
+                transform: rotate(15deg);
+            }
+            100%{
+                transform: rotate(0deg);
+            }
+        }
+        #loading{
+                width: 600px;                                                     
+                height: 40px;
+                background-color: lightblue;
+                border-radius: 20px;
+                position: relative;
+                overflow: hidden;
+        }
+        #loading > div{
+            width: 200%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            transform: skew(-24deg);
+            animation: flow-right 4s linear infinite;
+        }
+        #loading >div >div{
+            flex: 1 ;
+        }
+        #loading > div >div:nth-child(odd){
+            background-color: dodgerblue;
+        }
+        @keyframes flow-right{
+            from{
+                left: -600px;
+            }
+            to{
+                left: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading">
+
+    </div>
+
+    <button class="notice_btn">지금 확인하기</button>
+
+    <div class="banner">
+        <h1>새로운 시작</h1>
+        <p>당신의 새로운 도전을 응원합니다.</p>
+    </div>
+    <div class="alarm">
+        🔔
+    </div>
+
+    <div id="loading">
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</body>
+</html>

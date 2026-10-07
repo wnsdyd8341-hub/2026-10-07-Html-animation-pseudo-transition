@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        li,ul{
+            list-style: none;
+        }
+        
+        .container{
+            width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+            background-color: blanchedalmond;
+        }
+        .container h1{
+            margin: 20px;
+        }
+        .caption{
+            display: flex;
+            gap: 20px;
+
+        }
+        .caption img{
+            width: 100% ;
+        }
+        .caption li{
+            flex: 1;
+            position: relative;
+        }
+        .product{
+            background-color: rgba(0,0,0,50%);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: all 0.3s;
+            opacity: 0;
+            color: #fff;
+        }
+        .product .price{
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        .discount{
+            color: red;
+        }
+        .price>p{
+            font-style: bold;
+        }
+        .caption li:hover .product{
+            opacity: 1;
+            top: 0px;
+        }
+
+
+        
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <h1>지금부터 겨울까지 유즈드 플리스 추천</h1>
+
+        <ul class="caption">
+            <li>
+                <img class="max-w-full w-full absolute m-auto inset-0 h-auto z-0 visible object-cover" alt="유니클로플리스 M 상품 이미지" aria-hidden="true" src="https://image.msscdn.net/thumbnails/images/goods_img/20260824/7148957/7148957_17875708124808_500.jpg?w=780" loading="lazy" data-mds="Image">
+                <div class="product">
+                    <h2>유니클로</h2>
+                    <p>플리스 M</p>
+                    <div class="price">
+                        <p class="discount">25%</p> 
+                        <p>13,200원</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img class="max-w-full w-full absolute m-auto inset-0 h-auto z-0 visible object-cover" alt="리스트플리스 55 상품 이미지" aria-hidden="true" src="https://image.msscdn.net/thumbnails/images/goods_img/20260801/6975790/6975790_17855692346729_500.jpg?w=780" loading="lazy" data-mds="Image">
+                <div class="product">
+                    <h2>리스트</h2>
+                    <p>플리스 55</p>
+                    <div class="price">
+                        <p class="discount">35%</p> 
+                        <p>23,400원</p>
+                    </div>
+                </div>
+
+            </li>
+            <li>
+                <img class="max-w-full w-full absolute m-auto inset-0 h-auto z-0 visible object-cover" alt="엘엘빈플리스 XL 상품 이미지" aria-hidden="true" src="https://image.msscdn.net/thumbnails/images/goods_img/20260918/7365230/7365230_17897087148954_500.jpg?w=780" loading="lazy" data-mds="Image">
+                <div class="product">
+                    <h2>엘엘빈</h2>
+                    <p>플리스 XL</p>
+                    <div class="price">
+                        <p class="discount">10%</p> 
+                        <p>61,200원</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 클래스</title>
+    <style>
+        ul li:first-child{
+            color: red;
+        }
+        ul li:last-child{
+            color: blue;
+        }
+        ul li:nth-child(2){
+            color: aqua;
+        }
+        ul li:nth-child(2n+1){
+            color:brown;
+        }
+        .box p + p{
+            background-color: aquamarine;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li>첫번째</li>
+        <li>두번째</li>
+        <li>세번째</li>
+    </ul>
+
+    <div class="box">
+        <p>A</p>
+        <div>
+            <p>B</p>
+        </div>
+        <p>C</p>
+        <p>D</p>
+    </div>
+
+
+</body>
+</html>
